@@ -1,11 +1,11 @@
 import 'regenerator-runtime/runtime';
 import '@babel/polyfill';
 import { expect } from 'chai';
-import Bawler from '../src/index';
+import Bawler, { msg } from '../src/index';
 import messages from './fixtures/lang.js';
 import remoteMessages from './fixtures/remoteMessages.js';
 
-/*global describe, it*/
+/*global describe, it, beforeEach*/
 
 describe('Bawler', () => {
     describe('Configuration', () => {
@@ -23,9 +23,23 @@ describe('Bawler', () => {
 
             expect(Bawler.all('test')).to.deep.equal(remoteMessages);
         });
+
+        it('can change language', async () => {
+            Bawler.lang('zu');
+            expect(Bawler.currentLang).to.equal('zu');
+        });
     });
 
     describe('Messages', () => {
+        beforeEach(() => {
+            Bawler.lang();
+            Bawler.messages = {};
+        });
+
+        it('returns empty object when the language does not have any message', () => {
+            expect(Bawler.all('foo')).to.be.empty;
+        });
+
         it('can get messages from a single language', () => {
             Bawler.register('en', messages);
 
@@ -55,6 +69,10 @@ describe('Bawler', () => {
 
             Bawler.lang('es');
             expect(Bawler.msg('HELLO')).to.equal('hola');
+        });
+
+        it('outputs messages with shortcut function', () => {
+            expect(msg('HELLO WORLD')).to.equal('HELLO WORLD');
         });
     });
 });

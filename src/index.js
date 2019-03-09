@@ -11,11 +11,11 @@ class Bawler {
         this.currentLang = lang;
     }
 
-    register(lang = 'en', messages = {}) {
+    register(lang, messages) {
         this.messages[lang] = messages;
     }
 
-    async registerUrl(url, lang = 'en') {
+    async registerUrl(url, lang) {
         const data = await fetch(url);
         const jsondata = await data.json();
 
@@ -39,5 +39,8 @@ class Bawler {
 }
 
 const instance = new Bawler();
+const msg = instance.msg.bind(instance);
 
 export default instance;
+
+export { msg };
