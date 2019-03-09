@@ -1,6 +1,6 @@
 import { sprintf } from 'sprintf-js';
 
-class Brawler {
+class Bawler {
     constructor() {
         this.messages = {};
         this.currentLang = 'en';
@@ -30,6 +30,6 @@ class Brawler {
     }
 }
 
-const instance = new Brawler();
+const instance = new Bawler();
 
 export default instance;
