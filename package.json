@@ -1,6 +1,6 @@
 {
     "name": "bawlerjs",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Simple messages for your js",
     "main": "lib/main.js",
     "scripts": {
