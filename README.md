@@ -103,7 +103,7 @@ Bawler.lang('en');
 Bawler.msg('HELLO WORLD'); //Outputs: Hello world!
 ```
 
-You can also pass variables to the messages by using sprintf syntax (as in C an similar languages):
+You can also pass variables to the messages by using sprintf syntax (as in C and similar languages):
 
 ```js
 Bawler.register('en', {

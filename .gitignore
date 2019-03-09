@@ -81,4 +81,6 @@ typings/
 
 .vscode
 
-.dist
+dist
+
+lib
