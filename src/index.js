@@ -1,4 +1,5 @@
 import { sprintf } from 'sprintf-js';
+import fetch from 'node-fetch';
 
 class Bawler {
     constructor() {
@@ -12,6 +13,13 @@ class Bawler {
 
     register(lang = 'en', messages = {}) {
         this.messages[lang] = messages;
+    }
+
+    async registerUrl(url, lang = 'en') {
+        const data = await fetch(url);
+        const jsondata = await data.json();
+
+        this.register(lang, jsondata);
     }
 
     all(lang = null) {

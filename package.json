@@ -30,6 +30,7 @@
         "@babel/node": "^7.2.2",
         "@babel/plugin-transform-async-to-generator": "^7.3.4",
         "@babel/plugin-transform-regenerator": "^7.3.4",
+        "@babel/polyfill": "^7.2.5",
         "@babel/preset-env": "^7.3.4",
         "@babel/register": "^7.0.0",
         "chai": "^4.2.0",
@@ -38,10 +39,12 @@
         "nodemon": "^1.18.10",
         "nyc": "^13.3.0",
         "prettier": "^1.16.4",
+        "regenerator-runtime": "^0.13.1",
         "webpack": "^4.29.6",
         "webpack-cli": "^3.2.3"
     },
     "dependencies": {
+        "node-fetch": "^2.3.0",
         "sprintf-js": "^1.1.2"
     }
 }

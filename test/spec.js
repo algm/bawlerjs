@@ -1,6 +1,9 @@
+import 'regenerator-runtime/runtime';
+import '@babel/polyfill';
 import { expect } from 'chai';
 import Bawler from '../src/index';
 import messages from './fixtures/lang.js';
+import remoteMessages from './fixtures/remoteMessages.js';
 
 /*global describe, it*/
 
@@ -10,6 +13,15 @@ describe('Bawler', () => {
             Bawler.register('en', messages);
 
             expect(Bawler.all()).to.deep.equal({ en: messages });
+        });
+
+        it('can initialize from an url', async () => {
+            await Bawler.registerUrl(
+                'https://gist.githubusercontent.com/mendezcode/8275387/raw/db75e0adae779aaebfe25cd0e953356e34fc8d03/locales.json',
+                'test'
+            );
+
+            expect(Bawler.all('test')).to.deep.equal(remoteMessages);
         });
     });
 
