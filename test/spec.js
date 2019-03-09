@@ -42,7 +42,7 @@ describe('Bawler', () => {
             expect(Bawler.msg('HELLO')).to.equal('hello');
 
             Bawler.lang('es');
-            expect(Bawler.msg('HELLO')).to.equal('holaº');
+            expect(Bawler.msg('HELLO')).to.equal('hola');
         });
     });
 });
