@@ -1,8 +1,8 @@
 {
     "name": "bawlerjs",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Simple messages for your js",
-    "main": "lib/main.js",
+    "main": "lib/index.js",
     "scripts": {
         "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --require @babel/register",
         "build": "node_modules/.bin/webpack && node_modules/.bin/babel src -d lib --copy-files"
