@@ -40,7 +40,11 @@ class Bawler {
 
 const instance = new Bawler();
 const msg = instance.msg.bind(instance);
+const lang = instance.lang.bind(instance);
+const register = instance.register.bind(instance);
+const registerUrl = instance.registerUrl.bind(instance);
+const all = instance.all.bind(instance);
 
 export default instance;
 
-export { msg };
+export { msg, lang, register, registerUrl, all };
