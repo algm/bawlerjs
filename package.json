@@ -1,0 +1,47 @@
+{
+    "name": "bawlerjs",
+    "version": "0.0.0",
+    "description": "Simple messages for your js",
+    "main": "dist/main.js",
+    "scripts": {
+        "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha --require @babel/register",
+        "build": "node_modules/.bin/webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/algm/bawlerjs.git"
+    },
+    "keywords": [
+        "package",
+        "library",
+        "translation",
+        "messages",
+        "i18n"
+    ],
+    "author": "algm",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/algm/bawlerjs/issues"
+    },
+    "homepage": "https://github.com/algm/bawlerjs#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.3.4",
+        "@babel/node": "^7.2.2",
+        "@babel/plugin-transform-async-to-generator": "^7.3.4",
+        "@babel/plugin-transform-regenerator": "^7.3.4",
+        "@babel/preset-env": "^7.3.4",
+        "@babel/register": "^7.0.0",
+        "chai": "^4.2.0",
+        "eslint": "^5.15.1",
+        "mocha": "^6.0.2",
+        "nodemon": "^1.18.10",
+        "nyc": "^13.3.0",
+        "prettier": "^1.16.4",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3"
+    },
+    "dependencies": {
+        "sprintf-js": "^1.1.2"
+    }
+}
