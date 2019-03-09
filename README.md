@@ -36,7 +36,7 @@ yarn add bawlerjs
 Add this to your html:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/bawlerjs/dist/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bawlerjs/dist/bawler.js"></script>
 ```
 
 You can see all available versions here: https://www.jsdelivr.com/package/npm/bawlerjs

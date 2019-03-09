@@ -4,9 +4,11 @@
             "@babel/env",
             {
                 "targets": {
-                    "node": true
+                    "node": true,
+                    "browsers": "> 0.25%, not dead"
                 }
             }
         ]
-    ]
+    ],
+    "plugins": ["@babel/plugin-transform-runtime"]
 }
